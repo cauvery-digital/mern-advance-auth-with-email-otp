@@ -2,7 +2,7 @@
 
 ![Demo App](/frontend/public/screenshot-for-readme.png)
 
-About This Course:
+About This App:
 
 -   🔧 Backend Setup
 -   🗄️ Database Setup
