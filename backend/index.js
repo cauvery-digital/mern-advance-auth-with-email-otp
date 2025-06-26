@@ -8,6 +8,8 @@ import { connectDB } from "./db/connectDB.js";
 
 import authRoutes from "./routes/auth.route.js";
 
+import {removeUnverifiedAccounts} from "./automation/removeUnverifiedAccounts.js";
+
 dotenv.config();
 
 const app = express();
@@ -28,8 +30,8 @@ if (process.env.NODE_ENV === "production") {
 		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 	});
 }
-
+removeUnverifiedAccounts();
 app.listen(PORT, () => {
 	connectDB();
-	console.log("✔ Server is running on port: ", PORT);
+	console.log(`✔ Server is running on http://localhost:${PORT}`);
 });
