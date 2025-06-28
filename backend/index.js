@@ -33,5 +33,5 @@ if (process.env.NODE_ENV === "production") {
 removeUnverifiedAccounts();
 app.listen(PORT, () => {
 	connectDB();
-	console.log(`✔ Server is running on http://localhost:${PORT}`);
+	console.log(`\n🛰️  Server running on http://localhost:${PORT} ✔`);
 });

@@ -14,7 +14,13 @@ export const sender = {
   name: "GEI",
   email: 'nilesh007us@gmail.com',
  };
-transporter.verify().then(() => console.log('✔ Gmail SMTP (app-password) ready ✅'));
+transporter
+  .verify()
+  .then(() => console.log("📡 SMTP ⚙️  (app-password-checked)✔️  📝 ready to send emails ✈️  ✔"))
+  .catch( (error) => {
+    console.log(`\n❌ Error check your credentials: ${error.message}\n`);
+    process.exit(1); // 1 is failure, 0 status code is success
+  });
 // transporter.sendMail({
 //   from: process.env.MAIL_FROM,
 //   to: "geetaelectronicsandinfosys@gmail.com",
