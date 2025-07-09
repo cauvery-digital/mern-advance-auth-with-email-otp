@@ -29,13 +29,13 @@ const userSchema = new mongoose.Schema(
       enum: ["user", "admin"],
       default: "user",
     },
-    lastLogin: {
-      type: Date,
-      default: Date.now,
-    },
     isVerified: {
       type: Boolean,
       default: false,
+    },
+    lastLogin: {
+      type: Date,
+      default: Date.now,
     },
     resetPasswordToken: String,
     resetPasswordExpiresAt: Date,

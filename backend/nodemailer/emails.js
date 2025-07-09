@@ -2,7 +2,7 @@ import {
 	PASSWORD_RESET_REQUEST_TEMPLATE,
 	PASSWORD_RESET_SUCCESS_TEMPLATE,
 	VERIFICATION_EMAIL_TEMPLATE,
-	WELCOME_EMAIL_TEMPLET,
+	WELCOME_EMAIL_TEMPLATE,
 } from "./emailTemplates.js";
 import {transporter, sender} from "./nodemailer.config.js";
 
@@ -34,7 +34,7 @@ export const sendWelcomeEmail = async (email, name) => {
 			from: process.env.MAIL_FROM,
 			to: recipient,
 			subject: "Email Verified Successfully",
-			html: WELCOME_EMAIL_TEMPLET.replace("{name}", name),
+			html: WELCOME_EMAIL_TEMPLATE.replace("{name}", name),
 		});
 
 		console.log("Welcome email sent successfully", response);

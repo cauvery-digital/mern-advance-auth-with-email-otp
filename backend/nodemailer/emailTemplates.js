@@ -93,7 +93,7 @@ export const PASSWORD_RESET_REQUEST_TEMPLATE = `
 </body>
 </html>
 `;
-export const WELCOME_EMAIL_TEMPLET  = `
+export const WELCOME_EMAIL_TEMPLATE  = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,7 +168,7 @@ export const WELCOME_EMAIL_TEMPLET  = `
 </html>
 `;
 
-export const WELCOME_EMAIL_TEMPLET1 = `
+export const WELCOME_EMAIL_TEMPLATE1 = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
